@@ -1,25 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ingress-nginx
+  name: nginx-dev
   namespace: argocd
 spec:
   project: default
   source:
-    path: nginx/
+    path: DEV/nginx/
     repoURL: 'git@github.com:yx135790/Argocd-repository-leo.git'
     targetRevision: main
     helm:
-      releaseName: nginx
+      releaseName: nginx-dev
       valueFiles:
-      - values.yaml
+      - values-dev.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: web
   syncPolicy:
-    automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
-      prune: false # Specifies if resources should be pruned during auto-syncing ( false by default ).
-      selfHeal: false # Specifies if partial app sync should be executed when resources are changed only in target Kubernetes cluster and no git change detected ( false by default ).
-      allowEmpty: false # Allows deleting all application resources during automatic syncing ( false by default ).
-    syncOptions:     # Sync options which modifies sync behavior
-    - CreateNamespace=true # Namespace Auto-Creation ensures that namespa
+    automated:
+      prune: false
+      selfHeal: false
+      allowEmpty: false
+    syncOptions:    
+    - CreateNamespace=true 

@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    path: nginx/
+    path: DR/nginx/
     repoURL: 'git@github.com:yx135790/Argocd-repository-leo.git'
     targetRevision: main
     helm:
