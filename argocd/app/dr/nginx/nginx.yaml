@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-dr
+  namespace: argocd
+spec:
+  project: default
+  source:
+    path: nginx/
+    repoURL: 'git@github.com:yx135790/Argocd-repository-leo.git'
+    targetRevision: main
+    helm:
+      releaseName: nginx-dr
+      valueFiles:
+      - values-dr.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: web-dr
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+      allowEmpty: false
+    syncOptions:    
+    - CreateNamespace=true 
