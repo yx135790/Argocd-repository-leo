@@ -1,21 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-dev
+  name: nginx-dr
   namespace: argocd
 spec:
   project: default
   source:
-    path: DEV/nginx/
+    path: nginx/DR/
     repoURL: 'git@github.com:yx135790/Argocd-repository-leo.git'
     targetRevision: main
     helm:
-      releaseName: nginx-dev
+      releaseName: nginx-dr
       valueFiles:
-      - values-dev.yaml
+      - ../nginx-global.yaml
+      - values-dr.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: web
+    namespace: web-dr
   syncPolicy:
     automated:
       prune: false
