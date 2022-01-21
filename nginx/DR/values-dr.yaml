@@ -98,7 +98,7 @@ nginx:
 
   ## @param replicaCount Number of NGINX replicas to deploy
   ##
-  replicaCount: 1
+  replicaCount: 3
   ## @param podLabels Additional labels for NGINX pods
   ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
   ##
