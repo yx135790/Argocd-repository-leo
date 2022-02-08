@@ -1,18 +1,19 @@
+annotations:
+  category: DeveloperTools
 apiVersion: v2
-name: sealed-secrets
-version: 2.1.2
-appVersion: 0.17.3
+appVersion: v0.17.3
+description: Helm chart for the sealed-secrets controller.
 home: https://github.com/bitnami-labs/sealed-secrets
 icon: https://bitnami.com/assets/stacks/sealed-secrets/img/sealed-secrets-stack-220x234.png
 keywords:
 - secrets
 - sealed-secrets
-description: OTS Nginx ingress controller chart
-sources:
-  - https://charts.bitnami.com/bitnami
+kubeVersion: '>=1.16.0-0'
+maintainers:
+- email: containers@bitnami.com
+  name: Bitnami
+- email: mmikulicic@gmail.com
+  name: mkmik
+name: sealed-secrets
 type: application
-kubeVersion: ">=1.16.0-0"
-dependencies:
-  - name: sealed-secrets
-    version: 2.1.2
-    repository: https://bitnami-labs.github.io/sealed-secrets
+version: 2.1.2
