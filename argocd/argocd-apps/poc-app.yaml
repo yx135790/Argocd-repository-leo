@@ -10,7 +10,7 @@ spec:
     path: argocd/argocd-apps/poc-app
     repoURL: 'git@github.com:yx135790/Argocd-repository-leo.git'
     targetRevision: HEAD
-  project: default
+  project: poc
   syncPolicy:
     automated:
       prune: true
