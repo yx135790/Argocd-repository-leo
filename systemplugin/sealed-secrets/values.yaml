@@ -115,6 +115,7 @@ keyrenewperiod: ""
 ## Sealed Secret service parameters
 ##
 service:
+  name: "sealed-secrets-controller"
   ## @param service.type Sealed Secret service type
   ##
   type: ClusterIP
