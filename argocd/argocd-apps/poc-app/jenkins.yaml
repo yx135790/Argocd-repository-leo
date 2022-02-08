@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jenkins
+  namespace: argocd
+spec:
+  project: poc
+  source:
+    path: poc-app/jenkins
+    repoURL: 'git@github.com:yx135790/Argocd-repository-leo.git'
+    targetRevision: main
+    helm:
+      releaseName: jenkins
+      valueFiles:
+      - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: jenkins
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+      allowEmpty: false
+    syncOptions:    
+    - CreateNamespace=true 

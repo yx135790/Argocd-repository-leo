@@ -82,7 +82,7 @@ jenkinsUser: user
 ## @param jenkinsPassword Jenkins user password
 ## Defaults to a random 10-character alphanumeric string if not set
 ##
-jenkinsPassword: ""
+jenkinsPassword: "AgCYwi7efCloktiJ9mtcvimlwx4S7B1Ginl8Hg9Pbti87oGjBVRzZL2Mt+bLJEfrbA9HE+TLUt9TiLG8chPpy93ANPzKuYw2guxgc7jPniaJoK3O7pxkqz+PFo9NmS4LfFcEEoK9aVKP6rUkSKCOQ2wMgC9VsRaT0c0noRYrYnONYNAv9jv3ILE8RSPdI7j86hjxev923NTUXMEk+bZBvQ0whgebaqNFPzF1m6reaJDsJ422mtWKkDir91/R4QNCd0mknmTdwfUwEXPoUWX8mVXUkPJwzUEtDSZXVgVIAZrmXuPQ8od6zw7dpejkC2P+yygRNL0+pCQ2cX04qtXRuPxCbVYMRwQenVc85a/6OGqNM8G27hSpEWjpakMWwVqmWcPD3mGd7CSeTik9JliGs7UnOFVg4gxhnXP2C//hooQA1M5cBHQADjGE7MsEgEIihhKnXWuGPDp+evP2b33hQeHQ/kZX5OitfLw5lyeFQbrxhrOh2Yur6lnRzROxWjJkufv/vv"
 ## @param jenkinsHost Jenkins host to create application URLs
 ##
 jenkinsHost: ""
