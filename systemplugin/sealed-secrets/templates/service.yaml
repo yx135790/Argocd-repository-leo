@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "sealed-secrets.fullname" . }}
+  name: {{ .Values.service.name }}
   namespace: {{ include "sealed-secrets.namespace" . }}
   labels: {{- include "sealed-secrets.labels" . | nindent 4 }}
     {{- if .Values.service.labels }}
