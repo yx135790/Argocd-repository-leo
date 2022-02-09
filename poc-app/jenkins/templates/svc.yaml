@@ -25,6 +25,10 @@ spec:
   loadBalancerIP: {{ .Values.service.loadBalancerIP }}
   {{- end }}
   ports:
+    - name: jnlp
+      port:  {{ .Values.service.jnlp }}
+      portocal: TCP
+      targetPort: jnlp
     - name: http
       port: {{ .Values.service.port }}
       protocol: TCP
