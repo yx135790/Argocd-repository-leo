@@ -27,7 +27,7 @@ spec:
   ports:
     - name: jnlp
       port:  {{ .Values.service.jnlp }}
-      portocol: TCP
+      protocol: TCP
       targetPort: jnlp
     - name: http
       port: {{ .Values.service.port }}
