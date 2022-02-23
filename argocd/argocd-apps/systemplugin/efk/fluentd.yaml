@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fluentd
+  namespace: argocd
+spec:
+  project: default
+  source:
+    path: systemplugin/efk/fluentd
+    repoURL: 'git@github.com:yx135790/Argocd-repository-leo.git'
+    targetRevision: main
+    helm:
+      releaseName: fluentd
+      valueFiles:
+      - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kube-system
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+      allowEmpty: false
