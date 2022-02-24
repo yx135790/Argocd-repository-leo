@@ -6,14 +6,13 @@ metadata:
 spec:
   project: default
   source:
-    path: nginx/DEV/
+    path: nginx/
     repoURL: 'git@github.com:yx135790/Argocd-repository-leo.git'
     targetRevision: main
     helm:
       releaseName: nginx-dev
       valueFiles:
-      - ../nginx-global.yaml
-      - values-dev.yaml
+      - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: web
