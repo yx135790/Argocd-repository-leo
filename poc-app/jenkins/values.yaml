@@ -222,8 +222,8 @@ tolerations: {}
 resources:
   limits: {}
   requests:
-    memory: 512Mi
-    cpu: 300m
+    # memory: 512Mi
+    # cpu: 300m
 ## Container ports
 ## @param containerPorts.http Jenkins HTTP container port
 ## @param containerPorts.https Jenkins HTTPS container port
